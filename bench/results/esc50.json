@@ -1,0 +1,444 @@
+{
+  "dataset": "ESC-50 (Piczak 2015), 2,000 clips x 5 s, 50 classes; tune folds 1-3, test folds 4-5",
+  "model": "yamnet float32 v1 (MediaPipe)",
+  "alerts": [
+    {
+      "alert": "baby",
+      "esc50": "crying_baby",
+      "threshold": 0.35,
+      "hits": 1,
+      "trainF": 0.917,
+      "recall": 0.875,
+      "precision": 0.8235294117647058,
+      "falseAlarmRate": 0.003826530612244898,
+      "tp": 14,
+      "fn": 2,
+      "fp": 3
+    },
+    {
+      "alert": "knock",
+      "esc50": "door_wood_knock",
+      "threshold": 0.3,
+      "hits": 1,
+      "trainF": 0.833,
+      "recall": 0.75,
+      "precision": 0.7058823529411765,
+      "falseAlarmRate": 0.006377551020408163,
+      "tp": 12,
+      "fn": 4,
+      "fp": 5
+    },
+    {
+      "alert": "siren",
+      "esc50": "siren",
+      "threshold": 0.35,
+      "hits": 1,
+      "trainF": 0.906,
+      "recall": 1,
+      "precision": 0.8421052631578947,
+      "falseAlarmRate": 0.003826530612244898,
+      "tp": 16,
+      "fn": 0,
+      "fp": 3
+    },
+    {
+      "alert": "alarm",
+      "esc50": "clock_alarm",
+      "threshold": 0.3,
+      "hits": 1,
+      "trainF": 0.833,
+      "recall": 1,
+      "precision": 0.8888888888888888,
+      "falseAlarmRate": 0.002551020408163265,
+      "tp": 16,
+      "fn": 0,
+      "fp": 2
+    },
+    {
+      "alert": "glass",
+      "esc50": "glass_breaking",
+      "threshold": 0.15,
+      "hits": 1,
+      "trainF": 0.95,
+      "recall": 0.875,
+      "precision": 0.875,
+      "falseAlarmRate": 0.002551020408163265,
+      "tp": 14,
+      "fn": 2,
+      "fp": 2
+    },
+    {
+      "alert": "dog",
+      "esc50": "dog",
+      "threshold": 0.35,
+      "hits": 2,
+      "trainF": 0.958,
+      "recall": 1,
+      "precision": 0.9411764705882353,
+      "falseAlarmRate": 0.0012755102040816326,
+      "tp": 16,
+      "fn": 0,
+      "fp": 1
+    },
+    {
+      "alert": "horn",
+      "esc50": "car_horn",
+      "threshold": 0.15,
+      "hits": 1,
+      "trainF": 0.844,
+      "recall": 0.8125,
+      "precision": 0.9285714285714286,
+      "falseAlarmRate": 0.0012755102040816326,
+      "tp": 13,
+      "fn": 3,
+      "fp": 1
+    },
+    {
+      "alert": "cat",
+      "esc50": "cat",
+      "threshold": 0.3,
+      "hits": 2,
+      "trainF": 0.837,
+      "recall": 0.8125,
+      "precision": 0.9285714285714286,
+      "falseAlarmRate": 0.0012755102040816326,
+      "tp": 13,
+      "fn": 3,
+      "fp": 1
+    }
+  ],
+  "tuned": {
+    "baby": {
+      "threshold": 0.35,
+      "hits": 1,
+      "trainF": 0.917
+    },
+    "knock": {
+      "threshold": 0.3,
+      "hits": 1,
+      "trainF": 0.833
+    },
+    "siren": {
+      "threshold": 0.35,
+      "hits": 1,
+      "trainF": 0.906
+    },
+    "alarm": {
+      "threshold": 0.3,
+      "hits": 1,
+      "trainF": 0.833
+    },
+    "glass": {
+      "threshold": 0.15,
+      "hits": 1,
+      "trainF": 0.95
+    },
+    "dog": {
+      "threshold": 0.35,
+      "hits": 2,
+      "trainF": 0.958
+    },
+    "horn": {
+      "threshold": 0.15,
+      "hits": 1,
+      "trainF": 0.844
+    },
+    "cat": {
+      "threshold": 0.3,
+      "hits": 2,
+      "trainF": 0.837
+    }
+  },
+  "negativesWithAnyPage": {
+    "count": 14,
+    "of": 672,
+    "rate": 0.020833333333333332,
+    "causes": {
+      "door_wood_creaks -> baby": 1,
+      "laughing -> scream": 2,
+      "rooster -> knock": 1,
+      "brushing_teeth -> cat": 1,
+      "clock_tick -> knock": 1,
+      "footsteps -> knock": 3,
+      "door_wood_creaks -> horn": 1,
+      "rooster -> dog": 1,
+      "crickets -> alarm": 2,
+      "can_opening -> glass": 1
+    }
+  },
+  "cadence": {
+    "T3": {
+      "oneCycle": 1,
+      "twoCycles": 0
+    },
+    "T4": {
+      "oneCycle": 0,
+      "twoCycles": 0
+    },
+    "smokeOrCoPages": 0
+  },
+  "fewShot": {
+    "shots": 3,
+    "config": {
+      "negQuantile": 0.98,
+      "mix": 0.5,
+      "hits": 2
+    },
+    "trialsPerClass": 5,
+    "classes": 50,
+    "recall": 0.8151351351351351,
+    "falsePositiveRate": 0.04724,
+    "perClass": {
+      "airplane": {
+        "recall": 0.8918918918918919,
+        "fpr": 0.086,
+        "poorTrainings": 3
+      },
+      "breathing": {
+        "recall": 0.6486486486486487,
+        "fpr": 0.028,
+        "poorTrainings": 4
+      },
+      "brushing_teeth": {
+        "recall": 0.9135135135135135,
+        "fpr": 0.102,
+        "poorTrainings": 5
+      },
+      "can_opening": {
+        "recall": 0.7243243243243244,
+        "fpr": 0.052,
+        "poorTrainings": 4
+      },
+      "car_horn": {
+        "recall": 0.7783783783783784,
+        "fpr": 0.071,
+        "poorTrainings": 4
+      },
+      "cat": {
+        "recall": 0.8216216216216217,
+        "fpr": 0.051,
+        "poorTrainings": 2
+      },
+      "chainsaw": {
+        "recall": 0.8702702702702703,
+        "fpr": 0.039,
+        "poorTrainings": 3
+      },
+      "chirping_birds": {
+        "recall": 0.7891891891891892,
+        "fpr": 0.038,
+        "poorTrainings": 2
+      },
+      "church_bells": {
+        "recall": 0.9783783783783784,
+        "fpr": 0,
+        "poorTrainings": 0
+      },
+      "clapping": {
+        "recall": 0.918918918918919,
+        "fpr": 0.012,
+        "poorTrainings": 1
+      },
+      "clock_alarm": {
+        "recall": 0.7135135135135136,
+        "fpr": 0.005,
+        "poorTrainings": 1
+      },
+      "clock_tick": {
+        "recall": 0.6108108108108108,
+        "fpr": 0.064,
+        "poorTrainings": 3
+      },
+      "coughing": {
+        "recall": 0.8162162162162162,
+        "fpr": 0.041,
+        "poorTrainings": 1
+      },
+      "cow": {
+        "recall": 0.8594594594594595,
+        "fpr": 0.022,
+        "poorTrainings": 5
+      },
+      "crackling_fire": {
+        "recall": 0.8972972972972973,
+        "fpr": 0.073,
+        "poorTrainings": 4
+      },
+      "crickets": {
+        "recall": 0.4,
+        "fpr": 0.038,
+        "poorTrainings": 5
+      },
+      "crow": {
+        "recall": 0.9513513513513514,
+        "fpr": 0.054,
+        "poorTrainings": 2
+      },
+      "crying_baby": {
+        "recall": 1,
+        "fpr": 0.049,
+        "poorTrainings": 1
+      },
+      "dog": {
+        "recall": 0.9567567567567568,
+        "fpr": 0.008,
+        "poorTrainings": 0
+      },
+      "door_wood_creaks": {
+        "recall": 0.6108108108108108,
+        "fpr": 0.155,
+        "poorTrainings": 5
+      },
+      "door_wood_knock": {
+        "recall": 0.8810810810810811,
+        "fpr": 0.022,
+        "poorTrainings": 1
+      },
+      "drinking_sipping": {
+        "recall": 0.6702702702702703,
+        "fpr": 0.082,
+        "poorTrainings": 4
+      },
+      "engine": {
+        "recall": 0.7783783783783784,
+        "fpr": 0.08,
+        "poorTrainings": 3
+      },
+      "fireworks": {
+        "recall": 0.8756756756756757,
+        "fpr": 0.029,
+        "poorTrainings": 1
+      },
+      "footsteps": {
+        "recall": 0.9081081081081082,
+        "fpr": 0.076,
+        "poorTrainings": 4
+      },
+      "frog": {
+        "recall": 0.8918918918918919,
+        "fpr": 0.047,
+        "poorTrainings": 2
+      },
+      "glass_breaking": {
+        "recall": 0.7027027027027027,
+        "fpr": 0.01,
+        "poorTrainings": 2
+      },
+      "hand_saw": {
+        "recall": 0.8864864864864865,
+        "fpr": 0.02,
+        "poorTrainings": 2
+      },
+      "helicopter": {
+        "recall": 0.9081081081081082,
+        "fpr": 0.065,
+        "poorTrainings": 4
+      },
+      "hen": {
+        "recall": 0.9675675675675676,
+        "fpr": 0.017,
+        "poorTrainings": 0
+      },
+      "insects": {
+        "recall": 0.8,
+        "fpr": 0.009,
+        "poorTrainings": 2
+      },
+      "keyboard_typing": {
+        "recall": 0.9675675675675676,
+        "fpr": 0.013,
+        "poorTrainings": 1
+      },
+      "laughing": {
+        "recall": 0.7405405405405405,
+        "fpr": 0.052,
+        "poorTrainings": 3
+      },
+      "mouse_click": {
+        "recall": 0.6324324324324324,
+        "fpr": 0.08,
+        "poorTrainings": 4
+      },
+      "pig": {
+        "recall": 0.7945945945945946,
+        "fpr": 0.042,
+        "poorTrainings": 4
+      },
+      "pouring_water": {
+        "recall": 0.9351351351351351,
+        "fpr": 0.024,
+        "poorTrainings": 1
+      },
+      "rain": {
+        "recall": 0.8432432432432433,
+        "fpr": 0.058,
+        "poorTrainings": 4
+      },
+      "rooster": {
+        "recall": 0.8162162162162162,
+        "fpr": 0.047,
+        "poorTrainings": 4
+      },
+      "sea_waves": {
+        "recall": 0.9675675675675676,
+        "fpr": 0.044,
+        "poorTrainings": 0
+      },
+      "sheep": {
+        "recall": 0.9513513513513514,
+        "fpr": 0.017,
+        "poorTrainings": 3
+      },
+      "siren": {
+        "recall": 0.9513513513513514,
+        "fpr": 0.033,
+        "poorTrainings": 3
+      },
+      "sneezing": {
+        "recall": 0.6918918918918919,
+        "fpr": 0.029,
+        "poorTrainings": 2
+      },
+      "snoring": {
+        "recall": 0.9459459459459459,
+        "fpr": 0.035,
+        "poorTrainings": 2
+      },
+      "thunderstorm": {
+        "recall": 0.9891891891891892,
+        "fpr": 0.014,
+        "poorTrainings": 0
+      },
+      "toilet_flush": {
+        "recall": 0.9891891891891892,
+        "fpr": 0.038,
+        "poorTrainings": 1
+      },
+      "train": {
+        "recall": 0.972972972972973,
+        "fpr": 0.031,
+        "poorTrainings": 1
+      },
+      "vacuum_cleaner": {
+        "recall": 0.6108108108108108,
+        "fpr": 0.104,
+        "poorTrainings": 5
+      },
+      "washing_machine": {
+        "recall": 0.5783783783783784,
+        "fpr": 0.105,
+        "poorTrainings": 5
+      },
+      "water_drops": {
+        "recall": 0.32972972972972975,
+        "fpr": 0.064,
+        "poorTrainings": 3
+      },
+      "wind": {
+        "recall": 0.6270270270270271,
+        "fpr": 0.087,
+        "poorTrainings": 3
+      }
+    }
+  }
+}

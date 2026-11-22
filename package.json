@@ -1,0 +1,24 @@
+{
+  "name": "hark",
+  "version": "2.0.0",
+  "private": true,
+  "description": "HARK listens for important sounds - smoke and carbon monoxide alarms, the doorbell, a knock, a crying baby - on every phone, tablet and computer you own, alerts you on all of them, and keeps working on its own away from home. Sound recognition runs on each device; audio is never recorded or uploaded.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"test/unit/*.test.js\"",
+    "test:e2e": "node --test --test-concurrency=1 \"test/e2e/*.test.js\"",
+    "test:all": "npm test && npm run test:e2e"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@mediapipe/tasks-audio": "1.2.2",
+    "axe-core": "^4.14.1",
+    "playwright": "^1.65.0",
+    "qrcode-generator": "2.0.4"
+  }
+}

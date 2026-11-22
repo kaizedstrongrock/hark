@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HARK hubs are computers on the home network serving plain http (they have no certificate), at
+     addresses such as 192.168.1.20:3000 that cannot be listed in advance. The app sends nothing but small
+     alert messages to them; it does not load content from the internet. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

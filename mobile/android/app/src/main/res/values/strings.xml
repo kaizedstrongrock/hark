@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HARK</string>
+    <string name="title_activity_main">HARK</string>
+    <string name="package_name">app.hark.companion</string>
+    <string name="custom_url_scheme">app.hark.companion</string>
+</resources>
